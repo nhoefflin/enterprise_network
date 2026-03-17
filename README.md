@@ -4,4 +4,4 @@
 
 ![Topology](images/topology.png)
 
-
+### VLANs, etherchannels, SVIs
