@@ -1,1 +1,7 @@
-# enterprise_network
+# Enterprise Network
+
+## Network Topology 
+
+![Topology](images/topology.png)
+
+
