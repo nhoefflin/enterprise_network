@@ -36,6 +36,11 @@
 
 ![route_injection](images/bgp_ospf.png)
 
+- NAT/PAT
+    - Configured PAT to translate internal private IP space to a sinlge public IP
+
+![pat](images/pat.png)
+
 
 ### Firewall
 
