@@ -39,7 +39,7 @@
 - NAT/PAT
     - Configured PAT to translate internal private IP space to a sinlge public IP
 
-![pat](images/pat.png)
+![pat](images/pat_2.png)
 
 
 ### Firewall
