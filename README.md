@@ -78,7 +78,7 @@
 - Layer 2 Integration:
     - Etherchannel (LACP) uplink to access switch
     - Trunk configured with allowed VLANs for endpoint connectivity 
-    - DTP disabled (switchport nonegotiate) for security and consistency 
+    - DTP disabled for security and consistency 
 
 ![etherchannel_1](images/etherchannel_1.png)
 
