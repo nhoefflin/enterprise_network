@@ -84,4 +84,9 @@
 
 - Infrastructure Services:
     - DHCP for dynamic IP address assignment
-    - DNS for internal name resolution
+    - DHCP relay configured on SVIs
+    - DNS for internal name resolution (enterprise.com)
+
+![dhcp_pools](images/dhcp_pools.png)
+![dhcp_lease](images/dhcp_lease.png)
+![dns](images/dns.png)
