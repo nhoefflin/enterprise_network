@@ -28,7 +28,7 @@
 
 ![BGP](images/Edge.png)
 
-    - OSPF with Core (Lan + DMZ)
+- OSPF with Core (Lan + DMZ)
 - Functions:
     - Route redistribution (BGP <--> OSPF)
     - Default route injection into OSPF
