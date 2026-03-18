@@ -32,10 +32,10 @@
 - Functions:
     - Route redistribution (BGP <--> OSPF)
     - Default route injection into OSPF for internet reachability to internal networks
+- Redundancy: Dual ISP upstream connectivity 
 
 ![route_injection](images/bgp_ospf.png)
 
-- Redundancy: Dual ISP upstream connectivity 
 
 ### Firewall
 
