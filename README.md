@@ -24,8 +24,10 @@
 - Role: Internet edge device 
 - Routing:
     - eBGP with ISP_1 and ISP_2
+    - NOTE: loopback interfaces would be preferred for BGP peering to improve stability; however, Packet Tracer limitations required the use of directly connected interface IPs.
 
 ![BGP](images/Edge.png)
+
     - OSPF with Core (Lan + DMZ)
 - Functions:
     - Route redistribution (BGP <--> OSPF)
