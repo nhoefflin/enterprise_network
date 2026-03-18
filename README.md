@@ -100,23 +100,23 @@
 
 ### DMZ Core
 
-- Role: Isolated network segment for public-facing services
-- Routing: Routed via firewall (controlled inter-zone traffic)
+- Role: Layer 3 switch for DMZ segment
+- Routing: Local VLAN gateway provided by DMZ core; inter-zone traffic controlled by firewall
 - Functions:
-    - Segments public-facing servers from the internal LAN
-    - Provides controlled access between LAN, DMZ, and external networks
+    - Provides Layer 3 gateway services for DMZ hosts
+    - Segments public-facing services from the internal LAN
+    - Supports controlled access between LAN, DMZ, and external networks through the firewall
     - Enables name-based access to services via internal DNS (web.enterprise.com)
-    - Enables secure traffic inspection and policy enforcement via firewall
     - Hosts web and DNS services accessible internally and externally via NAT
 - Layer 3 Services:
     - Subnet: 10.20.60.0/24
-    - Default gateway provided via firewall interface for VLAN 60
-    - Inter-zone routing handled by firewall
+    - Inter-VLAN routing via SVI for VLAN 60
+    - Default gateway assignment for DMZ hosts
 - Service Deployment:
     - Web server (10.20.60.10) for HTTP services
     - DNS server (10.20.60.20) for internal name resolution
     - DNS A record configured (web.enterprise.com --> 10.20.60.10)
 - Traffic Flow Design:
-    - Internal: LAN --> CORE --> Firewall --> DMZ
+    - Internal: LAN Core --> Firewall --> DMZ Core
     - No direct layer 2 adjacency between LAN and DMZ
     - Centralized DNS hosted in DMZ for controlled name resolution
