@@ -28,10 +28,21 @@
 
 ![BGP](images/Edge.png)
 
-- OSPF with Core (Lan + DMZ)
+- Edge <--> Firewall
 - Functions:
     - Route redistribution (BGP <--> OSPF)
-    - Default route injection into OSPF
+    - Default route injection into OSPF for internet reachability to internal networks
+
+![route_injection](images/bgp_ospf.png)
+
 - Redundancy: Dual ISP upstream connectivity 
+
+### Firewall
+
+- OSPF external default route (E2) learned from the edge router, used to direct outbound traffic to the Internet
+
+![E2](images/e2.png)
+
+
 
 ### VLANs, etherchannels, SVIs
