@@ -22,6 +22,7 @@
 
 ### Edge Router 
 - Role: Internet edge device 
+- Redundancy: Dual ISP upstream connectivity 
 - Routing:
     - eBGP with ISP_1 and ISP_2
     - NOTE: loopback interfaces would be preferred for BGP peering to improve stability; however, Packet Tracer limitations required the use of directly connected interface IPs.
@@ -32,7 +33,6 @@
 - Functions:
     - Route redistribution (BGP <--> OSPF)
     - Default route injection into OSPF for internet reachability to internal networks
-- Redundancy: Dual ISP upstream connectivity 
 
 ![route_injection](images/bgp_ospf.png)
 
