@@ -58,4 +58,30 @@
 
 
 
-### VLANs, etherchannels, SVIs
+### LAN Core
+
+- Role: Layer 3 Core Switch
+- Routing: OSPF (Area 1)
+- Function:
+    - Provides inter-VLAN routing for internal networks
+    - Acts as the default gateway for end devices
+    - Connects access layer switch to the routed network
+- Layer 3 Services:
+    - Inter-VLAN routing via SVIs
+    - Default gateway assignments for each VLAN
+
+![SVI](images/svi.png)
+
+- OSPF design:
+    - Participates in Area 1 (LAN)
+    - Advertises all VLAN subnets (10.10.x.0/24) to the firewall (ABR)
+- Layer 2 Integration:
+    - Etherchannel (LACP) uplink to access switch
+    - Trunk configured with allowed VLANs for endpoint connectivity 
+    - DTP disabled (switchport nonegotiate) for security and consistency 
+
+![etherchannel_1](images/etherchannel_1.png)
+
+- Infrastructure Services:
+    - DHCP for dynamic IP address assignment
+    - DNS for internal name resolution
