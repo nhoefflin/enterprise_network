@@ -88,5 +88,7 @@
     - DNS for internal name resolution (enterprise.com)
 
 ![dhcp_pools](images/dhcp_pools.png)
+
 ![dhcp_lease](images/dhcp_lease.png)
+
 ![dns](images/dns.png)
