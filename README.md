@@ -37,9 +37,10 @@
 ![route_injection](images/bgp_ospf.png)
 
 - NAT/PAT
-    - Configured PAT to translate internal private IP space to a sinlge public IP
+    - Configured PAT to translate internal private IP space to a sinlge public IP (LAN + DMZ)
 
 ![pat](images/pat_2.png)
+![pat_dmz](images/nat_dmz.png)
 
 
 ### Firewall
