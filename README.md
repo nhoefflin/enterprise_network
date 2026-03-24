@@ -37,11 +37,14 @@
 ![route_injection](images/bgp_ospf.png)
 
 - NAT/PAT
-    - Configured PAT to translate internal private IP space to a sinlge public IP (LAN + DMZ)
+
+    - Dynamic PAT (NAT overload) is used to allow internal LAN hosts to share a single public IP for outbound internet access
 
 ![pat](images/pat_2.png)
-![pat_dmz](images/nat_dmz.png)
 
+    - Static PAT (port forwarding) is used to expose internal DMZ services to the internet via a shared public IP
+
+![dmz_translations](images/nat_trans.png)
 
 ### Firewall
 
@@ -61,8 +64,6 @@
 - OSPF external default route (E2) learned from the edge router, used to direct outbound traffic to the Internet
 
 ![E2](images/e2.png)
-
-
 
 ### LAN Core
 
@@ -99,6 +100,8 @@
 
 ![dns](images/dns.png)
 
+## DMZ
+
 ### DMZ Core
 
 - Role: Layer 3 switch for DMZ segment
@@ -107,17 +110,18 @@
     - Provides Layer 3 gateway services for DMZ hosts
     - Segments public-facing services from the internal LAN
     - Supports controlled access between LAN, DMZ, and external networks through the firewall
-    - Enables name-based access to services via internal DNS (web.enterprise.com)
-    - Hosts web and DNS services accessible internally and externally via NAT
-- Layer 3 Services:
-    - Subnet: 10.20.60.0/24
-    - Inter-VLAN routing via SVI for VLAN 60
-    - Default gateway assignment for DMZ hosts
+    - Enables name-based access to public services via DNS hosted in the DMZ
+    - Supports public service exposure through NAT on the edge router
+
+### DMZ Services
+
 - Service Deployment:
-    - Web server (10.20.60.10) for HTTP services
-    - DNS server (10.20.60.20) for internal name resolution
-    - DNS A record configured (web.enterprise.com --> 10.20.60.10)
-- Traffic Flow Design:
-    - Internal: LAN Core --> Firewall --> DMZ Core
-    - No direct layer 2 adjacency between LAN and DMZ
-    - Centralized DNS hosted in DMZ for controlled name resolution
+    - Web server (10.20.60.10) providing HTTP services
+    - DNS server (10.20.60.20) providing public name resolution
+    - DNS A record:
+        web.enterprise.com --> 203.0.113.2 (public IP via NAT)
+
+![web](images/web.png)
+
+![ns_lookup](images/ns_lookup.png)
+
