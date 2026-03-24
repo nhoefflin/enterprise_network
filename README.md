@@ -1,8 +1,29 @@
 # Enterprise Network
+    
+- The topology simulates a small enterprise network with segmented LAN and DMZ zones, providing secure internal access and controlled exposure of public-facing services
 
 ## Network Topology 
 
 ![Topology](images/topology_2.png)
+
+### Network Traffic Flow 
+
+- External clients access public services via the internet using DNS resolution (web.enterprise.com → public IP)
+- Incoming traffic reaches the edge router, where static PAT forwards requests to DMZ services (web and DNS servers)
+- The firewall enforces security policies, controlling traffic between external, DMZ, and internal LAN zones
+- DMZ hosts provide public-facing services while remaining isolated from the internal network
+- Internal LAN users access external resources via dynamic PAT (NAT overload), sharing a single public IP
+- Internal routing between VLANs is handled by the LAN core using SVIs
+- Inter-zone traffic (LAN ↔ DMZ ↔ external) is inspected and permitted based on firewall ACLs
+- Redundant Layer 2 connectivity is provided via EtherChannel between switches
+- Network devices and servers are managed securely via SSH from the internal network
+
+### Service Flow 
+
+- A user on the internet requests http://web.enterprise.com
+- DNS resolves the domain to the public IP of the edge router
+- The edge router performs static PAT, forwarding the request to the internal web server in the DMZ
+- The web server responds, and traffic is translated back to the public IP before returning to the client
 
 ### ISP_1
 - Role: ISP provider 
