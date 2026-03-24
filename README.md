@@ -132,6 +132,23 @@
 
 ![dns](images/dns.png)
 
+- Management Access for LAN:
+    - Implemented segmented management access using VLANs, ACLs, and SSH
+    - Restricted administrative access to IT VLAN only (10.10.20.0/24)
+    - Configured dedicated management VLAN (Jump_Box VLAN – 10.10.30.0/24) 
+    - Applied extended ACL to permit SSH to management interface (10.10.30.1)
+    - Enforced device access control using VTY line restrictions
+    - Validated policy with successful IT access and denied user access
+
+        - ACL Configuration 
+        ![acl_ssh](images/ssh_ACL.png)
+
+        - SSH Success (IT VLAN)
+        ![ssh_IT](images/ssh_IT.png)
+
+        - SSH Denial (User VLAN)
+        ![ssh_user](images/ssh_user.png)
+
 
 ## DMZ
 
