@@ -2,9 +2,11 @@
     
 - The topology simulates a small enterprise network with segmented LAN and DMZ zones, providing secure internal access and controlled exposure of public-facing services
 
+
 ## Network Topology 
 
 ![Topology](images/topology_2.png)
+
 
 ### Network Traffic Flow 
 
@@ -18,12 +20,18 @@
 - Redundant Layer 2 connectivity is provided via EtherChannel between switches
 - Network devices and servers are managed securely via SSH from the internal network
 
+
 ### Service Flow 
 
 - A user on the internet requests web.enterprise.com
 - DNS resolves the domain to the public IP of the edge router
 - The edge router performs static PAT, forwarding the request to the internal web server in the DMZ
 - The web server responds, and traffic is translated back to the public IP before returning to the client
+
+
+
+## Devices
+
 
 ### ISP_1
 - Role: ISP provider 
@@ -33,6 +41,7 @@
 
 ![BGP](images/ISP_1.png)
 
+
 ### ISP_2
 - Role: ISP provider 
 - Routing: BGP neighbor with edge router
@@ -40,6 +49,7 @@
 - Advertises: Default route 0.0.0.0/0
 
 ![BGP](images/ISP_2.png)
+
 
 ### Edge Router 
 - Role: Internet edge device 
@@ -66,6 +76,7 @@
 
 ![dmz_translations](images/nat_trans.png)
 
+
 ### Firewall
 
 - Role: Firewall / Area Border Router (ABR)
@@ -84,6 +95,7 @@
 - OSPF external default route (E2) learned from the edge router, used to direct outbound traffic to the Internet
 
 ![E2](images/e2.png)
+
 
 ### LAN Core
 
@@ -120,7 +132,9 @@
 
 ![dns](images/dns.png)
 
+
 ## DMZ
+
 
 ### DMZ Core
 
