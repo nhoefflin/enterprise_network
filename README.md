@@ -132,8 +132,8 @@
 
 ![dns](images/dns.png)
 
-- Management Access for LAN:
-    - Implemented segmented management access using VLANs, ACLs, and SSH
+- Management Access for LAN (without jump box available on pt):
+    - Configured segmented management access using VLANs, ACLs, and SSH
     - Restricted administrative access to IT VLAN only (10.10.20.0/24)
     - Configured dedicated management VLAN (Jump_Box VLAN – 10.10.30.0/24) 
     - Applied extended ACL to permit SSH to management interface (10.10.30.1)
