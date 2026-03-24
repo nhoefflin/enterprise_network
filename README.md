@@ -2,7 +2,7 @@
 
 ## Network Topology 
 
-![Topology](images/topology.png)
+![Topology](images/topology_2.png)
 
 ### ISP_1
 - Role: ISP provider 
