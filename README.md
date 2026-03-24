@@ -20,7 +20,7 @@
 
 ### Service Flow 
 
-- A user on the internet requests http://web.enterprise.com
+- A user on the internet requests web.enterprise.com
 - DNS resolves the domain to the public IP of the edge router
 - The edge router performs static PAT, forwarding the request to the internal web server in the DMZ
 - The web server responds, and traffic is translated back to the public IP before returning to the client
