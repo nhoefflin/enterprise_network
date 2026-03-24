@@ -39,10 +39,9 @@
 - NAT/PAT
 
     - Dynamic PAT (NAT overload) is used to allow internal LAN hosts to share a single public IP for outbound internet access
+    - Static PAT (port forwarding) is used to expose internal DMZ services to the internet via a shared public IP
 
 ![pat](images/pat_2.png)
-
-    - Static PAT (port forwarding) is used to expose internal DMZ services to the internet via a shared public IP
 
 ![dmz_translations](images/nat_trans.png)
 
