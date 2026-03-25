@@ -132,6 +132,8 @@
 
 ![dns](images/dns.png)
 
+### LAN Security
+
 - Management Access for LAN (without jump box available on pt):
     - Configured segmented management access using VLANs, ACLs, and SSH
     - Restricted administrative access to IT VLAN only (10.10.20.0/24)
@@ -148,6 +150,14 @@
 
         - SSH Denial (User VLAN)
         ![ssh_user](images/ssh_user.png)
+
+- Native VLAN Blackhole (VLAN 999):
+    - Prevents VLAN hopping and double tagging
+    - Configure all trunk links and unused ports to the native VLAN
+
+    ![native_vlan](images/native_vlan3.png)
+
+
 
 
 ## DMZ
