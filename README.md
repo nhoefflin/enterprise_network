@@ -163,6 +163,13 @@
 
     ![port_sec](images/port_security.png)
 
+- Root Guard:
+    - Prevents another switch from becoming root (STP)
+    - Configured "Root Primary" which establishes the switch as the STP root for selected VLANs
+
+    ![root_guard](images/root_guard.png)
+    ![root_primary](images/root_primary.png)
+
 
 
 
