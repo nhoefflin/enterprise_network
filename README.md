@@ -186,6 +186,14 @@
     ![storm_control](images/storm_control.png)
     ![sc_show](images/sc_show.png)
 
+- DHCP Snooping & ARP Inspection:
+    - Snooping: Blocks fake DHCP servers and builds trusted IP–MAC bindings preventing MitM attacks
+    - DAI: Uses DHCP Snooping bindings to stop ARP spoofing
+    
+    ![dhcp_arp](images/dhcp_arp.png)
+    ![dhcp_show](images/dhcp_show.png)
+    ![arp_show](images/arp_show.png)
+
 
 
 
