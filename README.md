@@ -172,6 +172,15 @@
     ![root_primary](images/root_primary.png)
     ![stp_summary](images/stp_summary.png)
 
+- BPDU Guard/PortFast:
+    - Stop endpoints from sending BPDUs (from rogue switches)
+    - Configured only on access ports
+    - PortFast --> skips STP learning/listening for faster host connectivity
+
+    ![BPDU_guard](images/bpdu_guard.png)
+
+
+
 
 
 
