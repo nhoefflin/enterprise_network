@@ -134,6 +134,8 @@
 
 ### LAN Security
 
+- Access control, STP protection, and Layer 2 attack mitigation
+
 - Management Access for LAN (without jump box available on pt):
     - Configured segmented management access using VLANs, ACLs, and SSH
     - Restricted administrative access to IT VLAN only (10.10.20.0/24)
