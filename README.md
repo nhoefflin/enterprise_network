@@ -140,7 +140,7 @@
     - Configured dedicated management VLAN (Jump_Box VLAN – 10.10.30.0/24) 
     - Applied extended ACL to permit SSH to management interface (10.10.30.1)
     - Enforced device access control using VTY line restrictions
-    - Validated policy with successful IT access and denied user access
+    - Validated policy with successful IT_VLAN access and denied Users_VLAN access
 
         - ACL Configuration 
         ![acl_ssh](images/ssh_ACL.png)
@@ -156,6 +156,12 @@
     - Configure all trunk links and unused ports to the native VLAN
 
     ![native_vlan](images/native_vlan3.png)
+
+- Port Security:
+    - Stops unauthorized devices on access ports 
+    - Configure it on both used and unused ports 
+
+    ![port_sec](images/port_security.png)
 
 
 
