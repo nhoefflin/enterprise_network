@@ -169,6 +169,7 @@
 
     ![root_guard](images/root_guard.png)
     ![root_primary](images/root_primary.png)
+    ![stp_summary](images/stp_summary.png)
 
 
 
