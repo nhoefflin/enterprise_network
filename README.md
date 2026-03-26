@@ -179,6 +179,13 @@
 
     ![BPDU_guard](images/bpdu_guard.png)
 
+- Storm Control:
+    - Mitigates broadcasts storms preventing Layer 2 flooding and potential DDoS conditions
+    - NOTE: The storm-control command in packet tracer is the only option
+
+    ![storm_control](images/storm_control.png)
+    ![sc_show](images/sc_show.png)
+
 
 
 
