@@ -90,7 +90,7 @@
     - Area 1 --> LAN core
 - Route Handling: 
     - Receives default route (0.0.0.0/0) from edge via OSPF
-    - Advertises summarized LAN route (10.10.0.0/16) into Area 0
+    - Advertises summarized LAN route (10.10.0.0/16) into Area 1
     - Maintains specific LAN routes internally (10.10.x.x/24)
 - OSPF external default route (E2) learned from the edge router, used to direct outbound traffic to the Internet
 
@@ -204,7 +204,7 @@
 
 - Storm Control:
     - Mitigates broadcasts storms preventing Layer 2 flooding and potential DDoS conditions
-    - NOTE: The storm-control command in packet tracer is the only option
+    - NOTE: The storm-control broadcast command in packet tracer is the only option
 
     ![storm_control](images/storm_control.png)
     ![sc_show](images/sc_show.png)
@@ -232,7 +232,6 @@
 - Functions:
     - Provides Layer 3 gateway services for DMZ hosts
     - Segments public-facing services from the internal LAN
-    - Supports controlled access between LAN, DMZ, and external networks through the firewall
     - Enables name-based access to public services via DNS hosted in the DMZ
     - Supports public service exposure through NAT on the edge router
 
