@@ -90,7 +90,7 @@
     - Area 1 --> LAN core
 - Route Handling: 
     - Receives default route (0.0.0.0/0) from edge via OSPF
-    - Advertises summarixed LAN route (10.10.0.0/16) into Area 0
+    - Advertises summarized LAN route (10.10.0.0/16) into Area 0
     - Maintains specific LAN routes internally (10.10.x.x/24)
 - OSPF external default route (E2) learned from the edge router, used to direct outbound traffic to the Internet
 
