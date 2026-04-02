@@ -99,20 +99,20 @@
 - Access Lists (ACLs):
     - Enforced segmented network access using stateless ACLs across Outside, LAN, and DMZ zones
 
-    - OUTSIDE_IN
-        - Allows OSPF for routing adjacency 
-        - Permits HTTP/HTTPS/DNS to DMZ only 
-        - Allows return traffic (TCP established, UDP, ICMP)
-    
-    - LAN_IN
-        - Allows OSPF for routing adjacency 
-        - Blocks all LAN --> DMZ traffic
-        - Allows LAN --> internet traffic as needed 
+        - OUTSIDE_IN
+            - Allows OSPF for routing adjacency 
+            - Permits HTTP/HTTPS/DNS to DMZ only 
+            - Allows return traffic (TCP established, UDP, ICMP)
 
-    - DMZ_IN
-        - Allows OSPF for routing adjacency 
-        - Blocks all DMZ --> LAN traffic
-        - Allows DMZ --> internet traffic as needed
+        - LAN_IN
+            - Allows OSPF for routing adjacency 
+            - Blocks all LAN --> DMZ traffic
+            - Allows LAN --> internet traffic as needed
+            
+        - DMZ_IN
+            - Allows OSPF for routing adjacency 
+            - Blocks all DMZ --> LAN traffic
+            - Allows DMZ --> internet traffic as needed
 
     ![fw_acl](images/fw_acl.png)
 
